@@ -1,0 +1,11 @@
+name: package_core
+description: "A new Flutter package project."
+version: 0.0.1
+homepage: https://example.com
+
+environment:
+  sdk: ^3.7.0
+  flutter: ">=1.17.0"
+
+resolution: workspace 
+  
