@@ -2,6 +2,9 @@ import '../package_core.dart';
 
 part 'api_provider.g.dart';
 
+//https://github.com/dart-lang/build/issues/3798
+//https://github.com/rrousselGit/riverpod/discussions/3997
+
 @riverpod
 Dio dio(Ref dioRef) {
   final Dio dio = Dio(
