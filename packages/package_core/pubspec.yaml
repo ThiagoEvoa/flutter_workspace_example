@@ -9,10 +9,8 @@ environment:
 
 resolution: workspace 
 
-dependencies:
-  flutter:
-    sdk: flutter
-
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  riverpod_generator: ^2.6.5
+  build_runner: ^2.4.15
+  json_serializable: ^6.9.4
+  retrofit_generator: ^9.1.9

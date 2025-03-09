@@ -8,3 +8,9 @@ environment:
   flutter: ">=1.17.0"
 
 resolution: workspace
+
+dev_dependencies:
+  riverpod_generator: ^2.6.5
+  build_runner: ^2.4.15
+  json_serializable: ^6.9.4
+  retrofit_generator: ^9.1.9
