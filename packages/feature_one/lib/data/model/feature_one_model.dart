@@ -9,4 +9,6 @@ abstract class FeatureOneModel with _$FeatureOneModel {
 
   factory FeatureOneModel.fromJson(Map<String, dynamic> json) =>
       _$FeatureOneModelFromJson(json);
+
+  factory FeatureOneModel.initialState() => FeatureOneModel(sid: '');
 }

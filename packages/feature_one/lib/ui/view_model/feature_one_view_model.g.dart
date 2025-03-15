@@ -7,7 +7,7 @@ part of 'feature_one_view_model.dart';
 // **************************************************************************
 
 String _$featureOneViewModelHash() =>
-    r'89834324234cb84634b1388e5586553413670014';
+    r'732a4052c6fbe6b7c9b354f98abaf9fb1919d362';
 
 /// See also [FeatureOneViewModel].
 @ProviderFor(FeatureOneViewModel)

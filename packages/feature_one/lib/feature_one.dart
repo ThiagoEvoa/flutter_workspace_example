@@ -1,3 +1,3 @@
 library;
 
-export 'ui/view/feature_one_screen.dart';
+export 'ui/ui.dart';

@@ -9,7 +9,7 @@
             "cwd": "my_app",
             "request": "launch",
             "type": "dart",
-            "toolArgs": ["--dart-define", "BASE_URL=http://192.168.1.133:8080/api/"]
+            "toolArgs": ["--dart-define", "BASE_URL=https://localhost:9011/api", "--dart-define", "ENV=dev"],
         }
     ]
 }

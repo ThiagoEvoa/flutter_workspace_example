@@ -1,7 +1,6 @@
 import 'package:package_core/package_core.dart';
 
-import '../model/feature_one_model.dart';
-import '../repository/feature_one_repository.dart';
+import '../data.dart';
 
 part 'feature_one_service.g.dart';
 
@@ -14,6 +13,6 @@ abstract class FeatureOneService implements FeatureOneRepository {
   factory FeatureOneService(Dio dio) = _FeatureOneService;
 
   @override
-  @GET('/hello-world')
-  Future<FeatureOneModel> retrieveHelloWorld();
+  @GET('')
+  Future<dynamic> retrieveHelloWorld();
 }

@@ -3,6 +3,7 @@ import 'package:package_core/package_core.dart';
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  CustomHttpOverrides.enableLocalhostOverrides();
   runApp(const ProviderScope(child: MyApp()));
 }
 
