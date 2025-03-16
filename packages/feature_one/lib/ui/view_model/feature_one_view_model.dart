@@ -8,14 +8,14 @@ part 'feature_one_view_model.g.dart';
 class FeatureOneViewModel extends _$FeatureOneViewModel {
   @override
   AsyncValue<dynamic> build() =>
-      AsyncValue.data(FeatureOneModel.initialState());
+      AsyncValue.data(FeatureOneListModel.initialState());
 
   Future<void> retrieveHelloWorld() async {
     try {
       final repository = ref.read(featureOneRepositoryProvider);
       state = const AsyncLoading();
-      final response = await repository.retrieveHelloWorld();
-      state = AsyncValue.data(FeatureOneModel.fromJson(response));
+      final response = await repository.retrieveFeatureOne();
+      state = AsyncValue.data(FeatureOneListModel.fromJson(response));
     } catch (exception, stackTrace) {
       state = AsyncValue.error(exception, stackTrace);
     }

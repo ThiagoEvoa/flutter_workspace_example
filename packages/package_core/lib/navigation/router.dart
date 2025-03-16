@@ -1,5 +1,4 @@
 import 'package:feature_one/feature_one.dart';
-import 'package:my_app/my_app.dart';
 
 import '../package_core.dart';
 
@@ -7,11 +6,14 @@ final GoRouter router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => const MyAppScreen(),
+      builder: (context, state) => FeatureOneScreen(),
       routes: [
         GoRoute(
-          path: '/feature-one',
-          builder: (context, state) => FeatureOneScreen(),
+          path: 'detail',
+          builder:
+              (context, state) => FeatureOneDetailScreen(
+                featureOneItem: state.extra as FeatureOneModel,
+              ),
         ),
       ],
     ),
