@@ -18,7 +18,7 @@ class _FeatureOneService implements FeatureOneService {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<dynamic> retrieveHelloWorld() async {
+  Future<dynamic> retrieveFeatureOne() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

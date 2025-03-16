@@ -1,5 +1,7 @@
-import 'package:feature_one/ui/view_model/feature_one_view_model.dart';
 import 'package:package_core/package_core.dart';
+
+import '../../data/model/feature_one_model.dart';
+import '../view_model/feature_one_view_model.dart';
 
 class FeatureOneScreen extends ConsumerStatefulWidget {
   const FeatureOneScreen({super.key});
@@ -15,6 +17,10 @@ class _FeatureOneScreenState extends ConsumerState<FeatureOneScreen> {
     });
   }
 
+  void _openDetailScreen(FeatureOneModel featureOneItem) {
+    context.go('/detail', extra: featureOneItem);
+  }
+
   @override
   void initState() {
     super.initState();
@@ -25,10 +31,22 @@ class _FeatureOneScreenState extends ConsumerState<FeatureOneScreen> {
   Widget build(BuildContext context) {
     final featureOneViewModel = ref.watch(featureOneViewModelProvider);
     final title = Localization.of(context).title;
+
     return Scaffold(
       appBar: AppBar(title: Text(title)),
       body: featureOneViewModel.when(
-        data: (featureOne) => Center(child: Text(featureOne.sid)),
+        // data: (featureOne) => Center(child: Text(featureOne.toString())),
+        data:
+            (featureOne) => ListView.builder(
+              itemCount: featureOne.list.length,
+              itemBuilder: (context, index) {
+                final featureOneItem = featureOne.list[index];
+                return ListTile(
+                  onTap: () => _openDetailScreen(featureOneItem),
+                  title: Text(featureOneItem.sid),
+                );
+              },
+            ),
         error:
             (exception, stackTrace) => Center(child: Text('Error: $exception')),
         loading: () => const Center(child: CircularProgressIndicator()),

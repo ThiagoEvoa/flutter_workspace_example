@@ -14,5 +14,5 @@ abstract class FeatureOneService implements FeatureOneRepository {
 
   @override
   @GET('')
-  Future<dynamic> retrieveHelloWorld();
+  Future<dynamic> retrieveFeatureOne();
 }

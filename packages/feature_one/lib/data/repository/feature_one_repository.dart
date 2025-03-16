@@ -1,3 +1,3 @@
 abstract class FeatureOneRepository {
-  Future<dynamic> retrieveHelloWorld();
+  Future<dynamic> retrieveFeatureOne();
 }

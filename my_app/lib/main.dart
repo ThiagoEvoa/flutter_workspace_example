@@ -1,10 +1,18 @@
 import 'package:package_core/package_core.dart';
 
-void main() {
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+void main() async {
+  _setUpSplashScreen();
   CustomHttpOverrides.enableLocalhostOverrides();
   runApp(const ProviderScope(child: MyApp()));
+}
+
+Future<void> _setUpSplashScreen() async {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await Future.delayed(
+    Duration(seconds: 3),
+    () => FlutterNativeSplash.remove(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,9 +22,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: appThemeLight,
+      darkTheme: appThemeDark,
       localizationsDelegates: const [
         LocalizationDelegate(),
         GlobalMaterialLocalizations.delegate,
