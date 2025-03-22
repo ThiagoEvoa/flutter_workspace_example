@@ -18,6 +18,7 @@ class CustomHttpOverrides extends HttpOverrides {
       ) {
         final isValidHost = [
           "localhost",
+          "192.168.1.131",
         ].contains(host); // <-- allow only hosts in array
         return isValidHost;
       });

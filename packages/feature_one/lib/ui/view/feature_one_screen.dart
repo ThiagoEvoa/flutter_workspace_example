@@ -35,17 +35,19 @@ class _FeatureOneScreenState extends ConsumerState<FeatureOneScreen> {
     return Scaffold(
       appBar: AppBar(title: Text(title)),
       body: featureOneViewModel.when(
-        // data: (featureOne) => Center(child: Text(featureOne.toString())),
         data:
             (featureOne) => ListView.builder(
               itemCount: featureOne.list.length,
               itemBuilder: (context, index) {
                 final featureOneItem = featureOne.list[index];
-                return ListTile(
-                  onTap: () => _openDetailScreen(featureOneItem),
-                  title: Text(featureOneItem.sid),
+                return Card(
+                  child: ListTile(
+                    onTap: () => _openDetailScreen(featureOneItem),
+                    title: Text(featureOneItem.sid),
+                  ),
                 );
               },
+              padding: EdgeInsets.all(5),
             ),
         error:
             (exception, stackTrace) => Center(child: Text('Error: $exception')),

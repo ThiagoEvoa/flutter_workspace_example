@@ -5,11 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "my_app",
+            "name": "my_app_dev",
             "cwd": "my_app",
             "request": "launch",
             "type": "dart",
             "toolArgs": ["--dart-define", "BASE_URL=https://localhost:9011/api", "--dart-define", "ENV=dev"],
+        },
+        {
+            "name": "my_app_int",
+            "cwd": "my_app",
+            "request": "launch",
+            "type": "dart",
+            "toolArgs": ["--dart-define", "BASE_URL=https://192.168.1.131:9011/api", "--dart-define", "ENV=dev"],
         }
     ]
 }

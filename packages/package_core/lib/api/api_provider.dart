@@ -17,22 +17,6 @@ Dio dio(Ref dioRef) {
       responseType: ResponseType.json,
     ),
   );
-  // (dio.httpClientAdapter as IOHttpClientAdapter).createHttpClient() = () => HttpClient()
-  //   ..badCertificateCallback = (X509Certificate cert, String host, int port) {
-  //     return true;
-  //   };
-  // dio.httpClientAdapter = IOHttpClientAdapter(
-  //   createHttpClient: () {
-  //     // Don't trust any certificate just because their root cert is trusted.
-  //     final HttpClient client = HttpClient(
-  //       context: SecurityContext(withTrustedRoots: false),
-  //     );
-  //     // You can test the intermediate / root cert here. We just ignore it.
-  //     client.badCertificateCallback =
-  //         ((X509Certificate cert, String host, int port) => true);
-  //     return client;
-  //   },
-  // );
 
   dio.interceptors.add(PrettyDioLogger(requestHeader: true, requestBody: true));
   dio.interceptors.add(

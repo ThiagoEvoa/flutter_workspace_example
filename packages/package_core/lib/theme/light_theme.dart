@@ -1,4 +1,5 @@
 import '../../package_core.dart';
+import 'widgets_theme_data/widget_theme_data.dart';
 
 const _mapColor = <int, Color>{
   50: Color(0xFFede7f6),
@@ -21,4 +22,7 @@ final appThemeLight = ThemeData(
   cupertinoOverrideTheme: const CupertinoThemeData(
     brightness: Brightness.light,
   ),
+  listTileTheme: listTileThemeData,
+  cardTheme: cardThemeData,
+  appBarTheme: appBarThemeData,
 );
