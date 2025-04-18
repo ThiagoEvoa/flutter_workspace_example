@@ -6,14 +6,11 @@ final GoRouter router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => FeatureOneScreen(),
+      builder: (context, state) => FeatureOneEntryPointScreen(),
       routes: [
         GoRoute(
           path: 'detail',
-          builder:
-              (context, state) => FeatureOneDetailScreen(
-                featureOneItem: state.extra as FeatureOneModel,
-              ),
+          builder: (context, state) => FeatureOneDetailScreen(),
         ),
       ],
     ),

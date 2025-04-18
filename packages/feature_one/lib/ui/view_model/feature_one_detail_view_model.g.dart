@@ -1,30 +1,30 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'feature_one_view_model.dart';
+part of 'feature_one_detail_view_model.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$featureOneViewModelHash() =>
-    r'8bd634fcb45fcef3ba70d4765e37ce0ac88c6b26';
+String _$featureOneDetailViewModelHash() =>
+    r'6f93533e61ef176eb069f0e8ed607207ce62635b';
 
-/// See also [FeatureOneViewModel].
-@ProviderFor(FeatureOneViewModel)
-final featureOneViewModelProvider = AutoDisposeNotifierProvider<
-  FeatureOneViewModel,
+/// See also [FeatureOneDetailViewModel].
+@ProviderFor(FeatureOneDetailViewModel)
+final featureOneDetailViewModelProvider = AutoDisposeNotifierProvider<
+  FeatureOneDetailViewModel,
   AsyncValue<dynamic>
 >.internal(
-  FeatureOneViewModel.new,
-  name: r'featureOneViewModelProvider',
+  FeatureOneDetailViewModel.new,
+  name: r'featureOneDetailViewModelProvider',
   debugGetCreateSourceHash:
       const bool.fromEnvironment('dart.vm.product')
           ? null
-          : _$featureOneViewModelHash,
+          : _$featureOneDetailViewModelHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$FeatureOneViewModel = AutoDisposeNotifier<AsyncValue<dynamic>>;
+typedef _$FeatureOneDetailViewModel = AutoDisposeNotifier<AsyncValue<dynamic>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
