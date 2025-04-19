@@ -1,5 +1,7 @@
-import 'package:feature_one/feature_one.dart';
 import 'package:package_core/package_core.dart';
+
+import './feature_one_detail_screen.dart';
+import './feature_one_screen.dart';
 
 class FeatureOneEntryPointScreen extends StatefulWidget {
   const FeatureOneEntryPointScreen({super.key});

@@ -1,4 +1,3 @@
 library;
 
-export 'data/data.dart';
-export 'ui/ui.dart';
+export 'util/util.dart';
