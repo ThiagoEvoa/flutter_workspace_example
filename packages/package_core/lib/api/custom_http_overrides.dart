@@ -1,10 +1,27 @@
 import '../../package_core.dart';
 
+/// The purpose of this CustomHttpOverrides class is to bypass SSL certificate validation for specific predefined hosts only when the application run with the kDebugMode.
+///
+/// This is a common technique used during development to allow the app to connect to local backend servers or servers on a local network that might be using self-signed certificates for HTTPS, which would normally be rejected by the HTTP client.
 class CustomHttpOverrides extends HttpOverrides {
   static void enableLocalhostOverrides() {
-    final environment = const String.fromEnvironment('ENV');
-    if (environment == 'dev') {
+    if (kDebugMode) {
       HttpOverrides.global = CustomHttpOverrides();
+      debugPrint(
+        '*****************************************************************',
+      );
+      debugPrint(
+        '* WARNING: CustomHttpOverrides enabled for debug.               *',
+      );
+      debugPrint(
+        '* Certificate validation bypassed for specific hosts.           *',
+      );
+      debugPrint(
+        '* DO NOT SHIP YOUR APP WITH THIS ENABLED IN RELEASE BUILDS.     *',
+      );
+      debugPrint(
+        '*****************************************************************',
+      );
     }
   }
 

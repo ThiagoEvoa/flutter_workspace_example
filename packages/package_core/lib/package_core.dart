@@ -5,7 +5,7 @@ export 'dart:io'
 
 export 'package:dio/dio.dart';
 export 'package:flutter/cupertino.dart' hide RefreshCallback;
-export 'package:flutter/foundation.dart' show SynchronousFuture;
+export 'package:flutter/foundation.dart' show SynchronousFuture, kDebugMode;
 export 'package:flutter/material.dart';
 export 'package:flutter_localizations/flutter_localizations.dart';
 export 'package:flutter_native_splash/flutter_native_splash.dart';

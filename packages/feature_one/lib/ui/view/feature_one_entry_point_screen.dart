@@ -17,6 +17,7 @@ class _FeatureOneEntryPointScreenState
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.sizeOf(context);
 
+    // https://codelabs.developers.google.com/codelabs/flutter-animated-responsive-layout#6
     return screenSize.width > 600
         ? Row(
           children: <Widget>[

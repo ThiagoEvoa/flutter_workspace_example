@@ -1,6 +1,7 @@
 import 'package:package_core/package_core.dart';
 
 import '../../data/model/feature_one_model.dart';
+import '../../util/router/feature_one_router.dart';
 import '../view_model/feature_one_detail_view_model.dart';
 import '../view_model/feature_one_view_model.dart';
 import './feature_one_detail_screen.dart';
@@ -29,7 +30,7 @@ class _FeatureOneScreenState extends ConsumerState<FeatureOneScreen> {
   }
 
   void _openDetailScreen(FeatureOneModel featureOneItem, bool isMultiScreen) {
-    isMultiScreen ? FeatureOneDetailScreen() : context.go('/detail');
+    isMultiScreen ? FeatureOneDetailScreen() : context.go('/$featureOneDetail');
   }
 
   @override
